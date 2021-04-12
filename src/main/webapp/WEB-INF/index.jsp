@@ -55,6 +55,9 @@
                 <a href="/"><button class="btn btn-success">Find Gold!</button></a>
             </form>
         </div>
+        <form action="/destroy" method="POST">
+        <input name="destroy" type="submit" value="Reset">
+        </form>
     </div>
     
     <div class="activities">

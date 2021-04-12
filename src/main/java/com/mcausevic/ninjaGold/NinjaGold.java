@@ -61,7 +61,7 @@ public class NinjaGold {
 				}
 				break;
 		}
-		text += location + " and "+ gained + " gold: "  + gold + " created at: " + ts;
+		text += location + " and "+ gained + n  + " gold: " + " created at: " + ts;
 		gold += n;
 		session.setAttribute("gold", gold);
 		
@@ -69,5 +69,12 @@ public class NinjaGold {
 		return "redirect:/";
 		
 	}
+	@PostMapping("/destroy")
+	public String destroy(HttpSession session) {
+		session.setAttribute("gold", 0);
+		activities = new ArrayList<String>();
+		return "redirect:/";
+	}
+	
 	
 }
